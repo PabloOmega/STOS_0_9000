@@ -1,0 +1,3 @@
+../lvgl/src/draw/sw/lv_draw_sw_transform.c:392:13:transform_rgb565a8	88	static
+../lvgl/src/draw/sw/lv_draw_sw_transform.c:197:13:tranform_rgb888	112	static
+../lvgl/src/draw/sw/lv_draw_sw_transform.c:81:6:lv_draw_sw_transform	208	static

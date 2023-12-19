@@ -1,0 +1,3 @@
+../lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888.c:260:35:rgb888_image_blend	104	static
+../lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888.c:65:28:lv_draw_sw_blend_color_to_argb8888	96	static
+../lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888.c:154:28:lv_draw_sw_blend_image_to_argb8888	112	static

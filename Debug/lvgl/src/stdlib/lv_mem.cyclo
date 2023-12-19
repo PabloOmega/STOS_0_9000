@@ -1,0 +1,5 @@
+../lvgl/src/stdlib/lv_mem.c:68:8:lv_malloc	2
+../lvgl/src/stdlib/lv_mem.c:103:6:lv_free	3
+../lvgl/src/stdlib/lv_mem.c:120:8:lv_realloc	5
+../lvgl/src/stdlib/lv_mem.c:142:13:lv_mem_test	2
+../lvgl/src/stdlib/lv_mem.c:152:6:lv_mem_monitor	1

@@ -1,0 +1,1 @@
+../lvgl/src/dev/display/tft_espi/../../../display/../misc/lv_color.h:218:19:lv_color_t lv_color_hex(uint32_t)	24	static

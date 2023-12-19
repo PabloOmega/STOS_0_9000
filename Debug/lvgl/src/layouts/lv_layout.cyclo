@@ -1,0 +1,3 @@
+../lvgl/src/layouts/lv_layout.c:39:6:_lv_layout_init	1
+../lvgl/src/layouts/lv_layout.c:53:10:lv_layout_register	2
+../lvgl/src/layouts/lv_layout.c:63:6:_lv_layout_apply	3

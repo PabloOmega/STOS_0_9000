@@ -1,0 +1,7 @@
+../lvgl/src/themes/default/lv_theme_default.c:740:13:theme_apply	32	static
+../lvgl/src/themes/default/lv_theme_default.c:208:19:grey_filter_cb	48	static
+../lvgl/src/themes/default/lv_theme_default.c:202:19:dark_color_filter_cb	16	static
+../lvgl/src/themes/default/lv_theme_default.c:661:14:lv_theme_default_init	120	static
+../lvgl/src/themes/default/lv_theme_default.c:715:6:lv_theme_default_deinit	8	static
+../lvgl/src/themes/default/lv_theme_default.c:723:14:lv_theme_default_get	0	static
+../lvgl/src/themes/default/lv_theme_default.c:732:6:lv_theme_default_is_inited	0	static

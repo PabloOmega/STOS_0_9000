@@ -1,0 +1,9 @@
+../lvgl/src/widgets/led/lv_led.c:162:13:lv_led_event	160	static
+../lvgl/src/widgets/led/lv_led.c:154:13:lv_led_constructor	8	static
+../lvgl/src/widgets/led/lv_led.c:58:12:lv_led_create	8	static
+../lvgl/src/widgets/led/lv_led.c:75:6:lv_led_set_color	8	static
+../lvgl/src/widgets/led/lv_led.c:89:6:lv_led_set_brightness	0	static
+../lvgl/src/widgets/led/lv_led.c:106:6:lv_led_on	0	static
+../lvgl/src/widgets/led/lv_led.c:115:6:lv_led_off	0	static
+../lvgl/src/widgets/led/lv_led.c:124:6:lv_led_toggle	0	static
+../lvgl/src/widgets/led/lv_led.c:142:9:lv_led_get_brightness	0	static

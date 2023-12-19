@@ -1,0 +1,17 @@
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:516:27:USBH_HID_SOFProcess	8	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:248:27:USBH_HID_InterfaceDeInit	16	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:137:27:USBH_HID_InterfaceInit	48	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:282:27:USBH_HID_ClassRequest	32	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:547:20:USBH_HID_GetHIDReportDescriptor	16	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:577:20:USBH_HID_GetHIDDescriptor	16	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:599:20:USBH_HID_SetIdle	0	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:628:20:USBH_HID_SetReport	4	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:659:20:USBH_HID_GetReport	4	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:686:20:USBH_HID_SetProtocol	4	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:753:17:USBH_HID_GetDeviceType	0	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:783:9:USBH_HID_GetPollInterval	0	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:808:6:USBH_HID_FifoInit	0	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:825:10:USBH_HID_FifoRead	12	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:869:10:USBH_HID_FifoWrite	20	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:911:13:USBH_HID_EventCallback	0	static
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid.c:375:27:USBH_HID_Process	24	static

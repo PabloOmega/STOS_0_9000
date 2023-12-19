@@ -1,0 +1,11 @@
+../lvgl/src/osal/lv_os_none.c:40:13:lv_thread_init	1
+../lvgl/src/osal/lv_os_none.c:52:13:lv_thread_delete	1
+../lvgl/src/osal/lv_os_none.c:60:13:lv_mutex_init	1
+../lvgl/src/osal/lv_os_none.c:66:13:lv_mutex_lock	1
+../lvgl/src/osal/lv_os_none.c:72:13:lv_mutex_lock_isr	1
+../lvgl/src/osal/lv_os_none.c:78:13:lv_mutex_unlock	1
+../lvgl/src/osal/lv_os_none.c:84:13:lv_mutex_delete	1
+../lvgl/src/osal/lv_os_none.c:90:13:lv_thread_sync_init	1
+../lvgl/src/osal/lv_os_none.c:97:13:lv_thread_sync_wait	1
+../lvgl/src/osal/lv_os_none.c:104:13:lv_thread_sync_signal	1
+../lvgl/src/osal/lv_os_none.c:111:13:lv_thread_sync_delete	1

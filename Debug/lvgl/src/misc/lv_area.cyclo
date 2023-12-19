@@ -1,0 +1,17 @@
+../lvgl/src/misc/lv_area.c:50:6:lv_area_set	1
+../lvgl/src/misc/lv_area.c:63:6:lv_area_set_width	1
+../lvgl/src/misc/lv_area.c:73:6:lv_area_set_height	1
+../lvgl/src/misc/lv_area.c:84:6:_lv_area_set_pos	1
+../lvgl/src/misc/lv_area.c:99:10:lv_area_get_size	1
+../lvgl/src/misc/lv_area.c:108:6:lv_area_increase	1
+../lvgl/src/misc/lv_area.c:116:6:lv_area_move	1
+../lvgl/src/misc/lv_area.c:131:6:_lv_area_intersect	1
+../lvgl/src/misc/lv_area.c:155:8:_lv_area_diff	13
+../lvgl/src/misc/lv_area.c:226:6:_lv_area_join	1
+../lvgl/src/misc/lv_area.c:241:6:_lv_area_is_point_on	17
+../lvgl/src/misc/lv_area.c:307:6:_lv_area_is_on	4
+../lvgl/src/misc/lv_area.c:324:6:_lv_area_is_in	9
+../lvgl/src/misc/lv_area.c:365:6:_lv_area_is_out	9
+../lvgl/src/misc/lv_area.c:396:6:_lv_area_is_equal	4
+../lvgl/src/misc/lv_area.c:408:6:lv_area_align	41
+../lvgl/src/misc/lv_area.c:534:6:lv_point_transform	8

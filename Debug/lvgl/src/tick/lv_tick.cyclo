@@ -1,0 +1,4 @@
+../lvgl/src/tick/lv_tick.c:42:28:lv_tick_inc	1
+../lvgl/src/tick/lv_tick.c:54:10:lv_tick_get	3
+../lvgl/src/tick/lv_tick.c:80:10:lv_tick_elaps	3
+../lvgl/src/tick/lv_tick.c:96:6:lv_tick_set_cb	1

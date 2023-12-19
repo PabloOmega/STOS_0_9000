@@ -1,0 +1,12 @@
+../lvgl/src/draw/lv_draw.c:46:6:lv_draw_init	1
+../lvgl/src/draw/lv_draw.c:53:8:lv_draw_create_unit	1
+../lvgl/src/draw/lv_draw.c:64:18:lv_draw_add_task	3
+../lvgl/src/draw/lv_draw.c:153:6:lv_draw_dispatch_layer	30
+../lvgl/src/draw/lv_draw.c:132:6:lv_draw_dispatch	7
+../lvgl/src/draw/lv_draw.c:90:6:lv_draw_finalize_task_creation	18
+../lvgl/src/draw/lv_draw.c:262:6:lv_draw_dispatch_wait_for_request	2
+../lvgl/src/draw/lv_draw.c:272:6:lv_draw_dispatch_request	1
+../lvgl/src/draw/lv_draw.c:281:18:lv_draw_get_next_available_task	20
+../lvgl/src/draw/lv_draw.c:313:14:lv_draw_layer_create	4
+../lvgl/src/draw/lv_draw.c:338:8:lv_draw_layer_alloc_buf	5
+../lvgl/src/draw/lv_draw.c:373:8:lv_draw_layer_go_to_xy	1

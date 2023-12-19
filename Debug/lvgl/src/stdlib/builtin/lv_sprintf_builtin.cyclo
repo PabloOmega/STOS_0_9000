@@ -1,0 +1,6 @@
+../lvgl/src/stdlib/builtin/lv_sprintf_builtin.c:130:20:_out_buffer	2
+../lvgl/src/stdlib/builtin/lv_sprintf_builtin.c:138:20:_out_null	1
+../lvgl/src/stdlib/builtin/lv_sprintf_builtin.c:202:15:_ntoa_format	52
+../lvgl/src/stdlib/builtin/lv_sprintf_builtin.c:555:12:_lv_vsnprintf	123
+../lvgl/src/stdlib/builtin/lv_sprintf_builtin.c:872:5:lv_snprintf	1
+../lvgl/src/stdlib/builtin/lv_sprintf_builtin.c:881:5:lv_vsnprintf	1

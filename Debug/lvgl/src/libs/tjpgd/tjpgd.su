@@ -1,0 +1,6 @@
+../lvgl/src/libs/tjpgd/tjpgd.c:438:12:bitext	32	static
+../lvgl/src/libs/tjpgd/tjpgd.c:534:9:jd_restart	24	static
+../lvgl/src/libs/tjpgd/tjpgd.c:735:9:jd_mcu_load	72	static
+../lvgl/src/libs/tjpgd/tjpgd.c:826:9:jd_mcu_output	96	static
+../lvgl/src/libs/tjpgd/tjpgd.c:940:9:jd_prepare	104	static
+../lvgl/src/libs/tjpgd/tjpgd.c:1101:9:jd_decomp	40	static

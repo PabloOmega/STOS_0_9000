@@ -1,0 +1,6 @@
+../lvgl/src/widgets/switch/lv_switch.c:215:13:lv_switch_anim_ready	0	static
+../lvgl/src/widgets/switch/lv_switch.c:205:13:lv_switch_anim_exec_cb	0	static
+../lvgl/src/widgets/switch/lv_switch.c:101:13:lv_switch_destructor	0	static
+../lvgl/src/widgets/switch/lv_switch.c:85:13:lv_switch_constructor	16	static
+../lvgl/src/widgets/switch/lv_switch.c:109:13:lv_switch_event	216	static
+../lvgl/src/widgets/switch/lv_switch.c:73:12:lv_switch_create	8	static

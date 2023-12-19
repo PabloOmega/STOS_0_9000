@@ -1,0 +1,3 @@
+../lvgl/src/draw/sw/lv_draw_sw_gradient.c:64:13:lv_gradient_get	32	static
+../lvgl/src/draw/sw/lv_draw_sw_gradient.c:84:28:lv_gradient_color_calculate	16	static
+../lvgl/src/draw/sw/lv_draw_sw_gradient.c:137:6:lv_gradient_cleanup	0	static

@@ -1,0 +1,15 @@
+../lvgl/src/layouts/flex/../../misc/lv_area.h:140:26:lv_area_get_width	1
+../lvgl/src/layouts/flex/../../misc/lv_area.h:150:26:lv_area_get_height	1
+../lvgl/src/layouts/flex/lv_flex.c:474:13:place_content	10
+../lvgl/src/layouts/flex/../../core/lv_obj_style_gen.h:155:26:lv_obj_get_style_margin_top	1
+../lvgl/src/layouts/flex/../../core/lv_obj_style_gen.h:161:26:lv_obj_get_style_margin_bottom	1
+../lvgl/src/layouts/flex/../../core/lv_obj_style_gen.h:167:26:lv_obj_get_style_margin_left	1
+../lvgl/src/layouts/flex/../../core/lv_obj_style_gen.h:173:26:lv_obj_get_style_margin_right	1
+../lvgl/src/layouts/flex/lv_flex.c:535:19:lv_obj_get_height_with_margin	1
+../lvgl/src/layouts/flex/lv_flex.c:528:19:lv_obj_get_width_with_margin	1
+../lvgl/src/layouts/flex/lv_flex.c:235:16:find_track_end	24
+../lvgl/src/layouts/flex/lv_flex.c:128:13:flex_update	79
+../lvgl/src/layouts/flex/lv_flex.c:96:6:lv_flex_init	1
+../lvgl/src/layouts/flex/lv_flex.c:103:6:lv_obj_set_flex_flow	1
+../lvgl/src/layouts/flex/lv_flex.c:109:6:lv_obj_set_flex_align	1
+../lvgl/src/layouts/flex/lv_flex.c:118:6:lv_obj_set_flex_grow	1

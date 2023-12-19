@@ -1,0 +1,2 @@
+../lvgl/src/draw/sw/lv_draw_sw_letter.c:63:35:draw_letter_cb	80	static
+../lvgl/src/draw/sw/lv_draw_sw_letter.c:52:6:lv_draw_sw_label	0	static

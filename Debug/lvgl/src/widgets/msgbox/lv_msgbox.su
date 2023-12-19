@@ -1,0 +1,11 @@
+../lvgl/src/widgets/msgbox/lv_msgbox.c:214:13:msgbox_close_click_event_cb	8	static
+../lvgl/src/widgets/msgbox/lv_msgbox.c:70:12:lv_msgbox_create	32	static
+../lvgl/src/widgets/msgbox/lv_msgbox.c:151:12:lv_msgbox_get_title	0	static
+../lvgl/src/widgets/msgbox/lv_msgbox.c:158:12:lv_msgbox_get_close_button	0	static
+../lvgl/src/widgets/msgbox/lv_msgbox.c:165:12:lv_msgbox_get_text	0	static
+../lvgl/src/widgets/msgbox/lv_msgbox.c:172:12:lv_msgbox_get_content	0	static
+../lvgl/src/widgets/msgbox/lv_msgbox.c:179:12:lv_msgbox_get_buttons	0	static
+../lvgl/src/widgets/msgbox/lv_msgbox.c:186:10:lv_msgbox_get_active_button	0	static
+../lvgl/src/widgets/msgbox/lv_msgbox.c:192:14:lv_msgbox_get_active_button_text	8	static
+../lvgl/src/widgets/msgbox/lv_msgbox.c:198:6:lv_msgbox_close	8	static
+../lvgl/src/widgets/msgbox/lv_msgbox.c:204:6:lv_msgbox_close_async	8	static

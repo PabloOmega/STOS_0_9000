@@ -1,0 +1,2 @@
+../lvgl/demos/lv_demos.c:107:6:lv_demos_create	0	static
+../lvgl/demos/lv_demos.c:155:6:lv_demos_show_help	0	static

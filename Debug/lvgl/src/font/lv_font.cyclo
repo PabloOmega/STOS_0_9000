@@ -1,0 +1,4 @@
+../lvgl/src/font/lv_font.c:49:6:lv_font_get_glyph_dsc.part.0	9
+../lvgl/src/font/lv_font.c:43:17:lv_font_get_glyph_bitmap	2
+../lvgl/src/font/lv_font.c:49:6:lv_font_get_glyph_dsc	3
+../lvgl/src/font/lv_font.c:114:10:lv_font_get_glyph_width	2

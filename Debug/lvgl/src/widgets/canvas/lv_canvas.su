@@ -1,0 +1,12 @@
+../lvgl/src/widgets/canvas/lv_canvas.c:340:13:lv_canvas_destructor	8	static
+../lvgl/src/widgets/canvas/lv_canvas.c:321:13:lv_canvas_constructor	0	static
+../lvgl/src/widgets/canvas/lv_canvas.c:54:12:lv_canvas_create	8	static
+../lvgl/src/widgets/canvas/lv_canvas.c:66:6:lv_canvas_set_buffer	24	static
+../lvgl/src/widgets/canvas/lv_canvas.c:86:6:lv_canvas_set_px	32	static
+../lvgl/src/widgets/canvas/lv_canvas.c:141:6:lv_canvas_set_palette	16	static
+../lvgl/src/widgets/canvas/lv_canvas.c:155:14:lv_canvas_get_px	32	static
+../lvgl/src/widgets/canvas/lv_canvas.c:202:18:lv_canvas_get_image	0	static
+../lvgl/src/widgets/canvas/lv_canvas.c:214:6:lv_canvas_copy_buf	32	static
+../lvgl/src/widgets/canvas/lv_canvas.c:237:6:lv_canvas_fill_bg	64	static
+../lvgl/src/widgets/canvas/lv_canvas.c:293:6:lv_canvas_init_layer	16	static
+../lvgl/src/widgets/canvas/lv_canvas.c:309:6:lv_canvas_finish_layer	16	static

@@ -1,0 +1,10 @@
+../lvgl/src/misc/lv_anim_timeline.c:184:13:lv_anim_timeline_virtual_exec_cb	0	static
+../lvgl/src/misc/lv_anim_timeline.c:41:22:lv_anim_timeline_create	8	static
+../lvgl/src/misc/lv_anim_timeline.c:52:6:lv_anim_timeline_delete	16	static
+../lvgl/src/misc/lv_anim_timeline.c:62:6:lv_anim_timeline_add	24	static
+../lvgl/src/misc/lv_anim_timeline.c:81:10:lv_anim_timeline_start	120	static
+../lvgl/src/misc/lv_anim_timeline.c:108:6:lv_anim_timeline_stop	16	static
+../lvgl/src/misc/lv_anim_timeline.c:118:6:lv_anim_timeline_set_reverse	0	static
+../lvgl/src/misc/lv_anim_timeline.c:124:6:lv_anim_timeline_set_progress	32	static
+../lvgl/src/misc/lv_anim_timeline.c:156:10:lv_anim_timeline_get_playtime	24	static
+../lvgl/src/misc/lv_anim_timeline.c:174:6:lv_anim_timeline_get_reverse	0	static

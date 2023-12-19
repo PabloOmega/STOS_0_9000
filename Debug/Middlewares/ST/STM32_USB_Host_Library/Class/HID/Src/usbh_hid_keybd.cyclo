@@ -1,0 +1,3 @@
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid_keybd.c:327:20:USBH_HID_KeybdInit	2
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid_keybd.c:372:25:USBH_HID_GetKeybdInfo	5
+../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid_keybd.c:430:9:USBH_HID_GetASCIICode	3

@@ -1,0 +1,6 @@
+../lvgl/src/widgets/line/lv_line.c:109:13:lv_line_constructor	1
+../lvgl/src/widgets/line/lv_line.c:135:13:lv_line_event	32
+../lvgl/src/widgets/line/lv_line.c:55:12:lv_line_create	1
+../lvgl/src/widgets/line/lv_line.c:67:6:lv_line_set_points	1
+../lvgl/src/widgets/line/lv_line.c:80:6:lv_line_set_y_invert	2
+../lvgl/src/widgets/line/lv_line.c:96:6:lv_line_get_y_invert	1

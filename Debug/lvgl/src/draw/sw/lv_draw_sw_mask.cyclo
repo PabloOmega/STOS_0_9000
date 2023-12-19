@@ -1,0 +1,15 @@
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:1056:52:lv_draw_mask_map	11
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:1010:52:lv_draw_mask_fade	21
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:900:52:lv_draw_mask_radius	43
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:440:52:lv_draw_mask_line	96
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:760:52:lv_draw_mask_angle	51
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:80:6:lv_draw_sw_mask_init	1
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:86:45:lv_draw_sw_mask_apply	4
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:112:6:lv_draw_sw_mask_free_param	4
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:132:6:_lv_draw_sw_mask_cleanup	4
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:154:6:lv_draw_sw_mask_line_points_init	15
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:249:6:lv_draw_sw_mask_line_angle_init	16
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:275:6:lv_draw_sw_mask_angle_init	4
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:336:6:lv_draw_sw_mask_radius_init	44
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:409:6:lv_draw_sw_mask_fade_init	1
+../lvgl/src/draw/sw/lv_draw_sw_mask.c:428:6:lv_draw_sw_mask_map_init	1

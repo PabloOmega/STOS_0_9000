@@ -1,0 +1,17 @@
+../lvgl/src/widgets/bar/../../core/../misc/../font/../misc/lv_area.h:140:26:lv_area_get_width	0	static
+../lvgl/src/widgets/bar/../../core/../misc/../font/../misc/lv_area.h:150:26:lv_area_get_height	0	static
+../lvgl/src/widgets/bar/lv_bar.c:240:13:lv_bar_destructor	8	static
+../lvgl/src/widgets/bar/lv_bar.c:497:13:lv_bar_anim_ready	0	static
+../lvgl/src/widgets/bar/lv_bar.c:490:13:lv_bar_anim	0	static
+../lvgl/src/widgets/bar/lv_bar.c:449:13:lv_bar_event	280	static
+../lvgl/src/widgets/bar/lv_bar.c:214:13:lv_bar_constructor	24	static
+../lvgl/src/widgets/bar/lv_bar.c:79:12:lv_bar_create	8	static
+../lvgl/src/widgets/bar/lv_bar.c:91:6:lv_bar_set_value	120	static
+../lvgl/src/widgets/bar/lv_bar.c:105:6:lv_bar_set_start_value	120	static
+../lvgl/src/widgets/bar/lv_bar.c:122:6:lv_bar_set_range	0	static
+../lvgl/src/widgets/bar/lv_bar.c:152:6:lv_bar_set_mode	0	static
+../lvgl/src/widgets/bar/lv_bar.c:169:9:lv_bar_get_value	0	static
+../lvgl/src/widgets/bar/lv_bar.c:177:9:lv_bar_get_start_value	0	static
+../lvgl/src/widgets/bar/lv_bar.c:187:9:lv_bar_get_min_value	0	static
+../lvgl/src/widgets/bar/lv_bar.c:194:9:lv_bar_get_max_value	0	static
+../lvgl/src/widgets/bar/lv_bar.c:202:15:lv_bar_get_mode	0	static

@@ -1,0 +1,11 @@
+../lvgl/src/widgets/animimage/lv_animimage.c:140:13:lv_animimg_constructor	1
+../lvgl/src/widgets/animimage/lv_animimage.c:159:13:index_change	1
+../lvgl/src/widgets/animimage/lv_animimage.c:61:12:lv_animimg_create	1
+../lvgl/src/widgets/animimage/lv_animimage.c:69:6:lv_animimg_set_src	1
+../lvgl/src/widgets/animimage/lv_animimage.c:78:6:lv_animimg_start	1
+../lvgl/src/widgets/animimage/lv_animimage.c:89:6:lv_animimg_set_duration	1
+../lvgl/src/widgets/animimage/lv_animimage.c:97:6:lv_animimg_set_repeat_count	1
+../lvgl/src/widgets/animimage/lv_animimage.c:108:15:lv_animimg_get_src	1
+../lvgl/src/widgets/animimage/lv_animimage.c:115:9:lv_animimg_get_src_count	1
+../lvgl/src/widgets/animimage/lv_animimage.c:122:10:lv_animimg_get_duration	1
+../lvgl/src/widgets/animimage/lv_animimage.c:129:10:lv_animimg_get_repeat_count	1

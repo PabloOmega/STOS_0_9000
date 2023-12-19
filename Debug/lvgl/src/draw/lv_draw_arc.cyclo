@@ -1,0 +1,3 @@
+../lvgl/src/draw/lv_draw_arc.c:38:6:lv_draw_arc_dsc_init	1
+../lvgl/src/draw/lv_draw_arc.c:46:6:lv_draw_arc	4
+../lvgl/src/draw/lv_draw_arc.c:69:6:lv_draw_arc_get_area	32

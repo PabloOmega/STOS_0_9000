@@ -1,0 +1,5 @@
+../lvgl/src/widgets/spinner/lv_spinner.c:96:13:arc_anim_start_angle	0	static
+../lvgl/src/widgets/spinner/lv_spinner.c:102:13:arc_anim_end_angle	0	static
+../lvgl/src/widgets/spinner/lv_spinner.c:84:13:lv_spinner_constructor	104	static
+../lvgl/src/widgets/spinner/lv_spinner.c:46:12:lv_spinner_create	8	static
+../lvgl/src/widgets/spinner/lv_spinner.c:55:6:lv_spinner_set_anim_params	104	static

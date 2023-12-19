@@ -1,0 +1,9 @@
+../lvgl/src/core/lv_obj_draw.c:40:6:lv_obj_init_draw_rect_dsc	23
+../lvgl/src/core/lv_obj_draw.c:146:6:lv_obj_init_draw_label_dsc	5
+../lvgl/src/core/lv_obj_draw.c:175:6:lv_obj_init_draw_image_dsc	7
+../lvgl/src/core/lv_obj_draw.c:200:6:lv_obj_init_draw_line_dsc	7
+../lvgl/src/core/lv_obj_draw.c:230:6:lv_obj_init_draw_arc_dsc	5
+../lvgl/src/core/lv_obj_draw.c:253:12:lv_obj_calculate_ext_draw_size	7
+../lvgl/src/core/lv_obj_draw.c:287:6:lv_obj_refresh_ext_draw_size	6
+../lvgl/src/core/lv_obj_draw.c:311:12:_lv_obj_get_ext_draw_size	2
+../lvgl/src/core/lv_obj_draw.c:317:17:_lv_obj_get_layer_type	2

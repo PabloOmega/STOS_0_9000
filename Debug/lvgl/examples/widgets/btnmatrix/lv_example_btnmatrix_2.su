@@ -1,0 +1,2 @@
+../lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c:5:13:event_cb	120	static
+../lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c:77:6:lv_example_buttonmatrix_2	8	static

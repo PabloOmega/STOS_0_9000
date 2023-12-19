@@ -1,0 +1,8 @@
+../lvgl/src/misc/lv_cache_builtin.c:139:21:get_data_cb	3
+../lvgl/src/misc/lv_cache_builtin.c:125:13:invalidate_cb	4
+../lvgl/src/misc/lv_cache_builtin.c:109:27:find_cb	15
+../lvgl/src/misc/lv_cache_builtin.c:179:13:empty_cb	6
+../lvgl/src/misc/lv_cache_builtin.c:168:13:set_max_size_cb	10
+../lvgl/src/misc/lv_cache_builtin.c:72:27:add_cb	11
+../lvgl/src/misc/lv_cache_builtin.c:152:13:release_cb	6
+../lvgl/src/misc/lv_cache_builtin.c:54:6:_lv_cache_builtin_init	1

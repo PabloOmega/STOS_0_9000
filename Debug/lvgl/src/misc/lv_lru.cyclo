@@ -1,0 +1,6 @@
+../lvgl/src/misc/lv_lru.c:74:12:lv_lru_create	5
+../lvgl/src/misc/lv_lru.c:104:6:lv_lru_delete	9
+../lvgl/src/misc/lv_lru.c:193:14:lv_lru_get	12
+../lvgl/src/misc/lv_lru.c:216:14:lv_lru_remove	13
+../lvgl/src/misc/lv_lru.c:238:6:lv_lru_remove_lru_item	9
+../lvgl/src/misc/lv_lru.c:140:14:lv_lru_set	20

@@ -1,0 +1,17 @@
+../lvgl/src/draw/lv_image_decoder.c:496:6:lv_image_decoder_built_in_close	8	static
+../lvgl/src/draw/lv_image_decoder.c:292:13:lv_image_decoder_built_in_info	32	static
+../lvgl/src/draw/lv_image_decoder.c:629:20:decode_indexed_line.isra	24	static
+../lvgl/src/draw/lv_image_decoder.c:511:13:lv_image_decoder_built_in_get_area	64	static
+../lvgl/src/draw/lv_image_decoder.c:359:13:lv_image_decoder_built_in_open	64	static
+../lvgl/src/draw/lv_image_decoder.c:57:6:_lv_image_decoder_init	8	static
+../lvgl/src/draw/lv_image_decoder.c:84:13:lv_image_decoder_get_info	24	static
+../lvgl/src/draw/lv_image_decoder.c:111:13:lv_image_decoder_open	40	static
+../lvgl/src/draw/lv_image_decoder.c:181:13:lv_image_decoder_get_area	8	static
+../lvgl/src/draw/lv_image_decoder.c:194:6:lv_image_decoder_close	8	static
+../lvgl/src/draw/lv_image_decoder.c:210:22:lv_image_decoder_create	8	static
+../lvgl/src/draw/lv_image_decoder.c:226:6:lv_image_decoder_delete	8	static
+../lvgl/src/draw/lv_image_decoder.c:237:22:lv_image_decoder_get_next	0	static
+../lvgl/src/draw/lv_image_decoder.c:250:6:lv_image_decoder_set_info_cb	0	static
+../lvgl/src/draw/lv_image_decoder.c:260:6:lv_image_decoder_set_open_cb	0	static
+../lvgl/src/draw/lv_image_decoder.c:270:6:lv_image_decoder_set_get_area_cb	0	static
+../lvgl/src/draw/lv_image_decoder.c:280:6:lv_image_decoder_set_close_cb	0	static

@@ -1,0 +1,14 @@
+../lvgl/src/widgets/calendar/lv_calendar.c:298:13:draw_part_begin_event_cb	8
+../lvgl/src/widgets/calendar/lv_calendar.c:388:13:highlight_update	7
+../lvgl/src/widgets/calendar/lv_calendar.c:62:12:lv_calendar_create	1
+../lvgl/src/widgets/calendar/lv_calendar.c:74:6:lv_calendar_set_day_names	1
+../lvgl/src/widgets/calendar/lv_calendar.c:86:6:lv_calendar_set_today_date	7
+../lvgl/src/widgets/calendar/lv_calendar.c:98:6:lv_calendar_set_highlighted_dates	8
+../lvgl/src/widgets/calendar/lv_calendar.c:111:6:lv_calendar_set_showed_date	20
+../lvgl/src/widgets/calendar/lv_calendar.c:242:13:lv_calendar_constructor	5
+../lvgl/src/widgets/calendar/lv_calendar.c:174:12:lv_calendar_get_btnmatrix	1
+../lvgl/src/widgets/calendar/lv_calendar.c:181:28:lv_calendar_get_today_date	1
+../lvgl/src/widgets/calendar/lv_calendar.c:189:28:lv_calendar_get_showed_date	1
+../lvgl/src/widgets/calendar/lv_calendar.c:197:22:lv_calendar_get_highlighted_dates	1
+../lvgl/src/widgets/calendar/lv_calendar.c:205:8:lv_calendar_get_highlighted_dates_num	1
+../lvgl/src/widgets/calendar/lv_calendar.c:213:13:lv_calendar_get_pressed_date	3

@@ -1,0 +1,6 @@
+../lvgl/src/draw/lv_draw_rect.c:39:28:lv_draw_rect_dsc_init	8	static
+../lvgl/src/draw/lv_draw_rect.c:58:6:lv_draw_fill_dsc_init	8	static
+../lvgl/src/draw/lv_draw_rect.c:64:6:lv_draw_border_dsc_init	8	static
+../lvgl/src/draw/lv_draw_rect.c:71:6:lv_draw_box_shadow_dsc_init	8	static
+../lvgl/src/draw/lv_draw_rect.c:77:6:lv_draw_bg_image_dsc_init	8	static
+../lvgl/src/draw/lv_draw_rect.c:84:6:lv_draw_rect	88	static

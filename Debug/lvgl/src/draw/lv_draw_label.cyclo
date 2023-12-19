@@ -1,0 +1,5 @@
+../lvgl/src/draw/lv_draw_label.c:50:6:lv_draw_label_dsc_init	1
+../lvgl/src/draw/lv_draw_label.c:64:6:lv_draw_letter_dsc_init	1
+../lvgl/src/draw/lv_draw_label.c:69:28:lv_draw_label	6
+../lvgl/src/draw/lv_draw_label.c:96:28:lv_draw_letter	8
+../lvgl/src/draw/lv_draw_label.c:131:6:lv_draw_label_interate_letters	38

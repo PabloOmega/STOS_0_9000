@@ -1,0 +1,4 @@
+../lvgl/src/draw/lv_draw_image.c:41:6:lv_draw_image_dsc_init	1
+../lvgl/src/draw/lv_draw_image.c:51:6:lv_draw_layer	1
+../lvgl/src/draw/lv_draw_image.c:67:6:lv_draw_image	4
+../lvgl/src/draw/lv_draw_image.c:103:16:lv_image_src_get_type	3

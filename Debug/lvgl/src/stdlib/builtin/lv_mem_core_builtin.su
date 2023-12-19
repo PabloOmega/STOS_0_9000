@@ -1,0 +1,10 @@
+../lvgl/src/stdlib/builtin/lv_mem_core_builtin.c:247:13:lv_mem_walker	0	static
+../lvgl/src/stdlib/builtin/lv_mem_core_builtin.c:72:6:lv_mem_init	16	static
+../lvgl/src/stdlib/builtin/lv_mem_core_builtin.c:101:6:lv_mem_deinit	16	static
+../lvgl/src/stdlib/builtin/lv_mem_core_builtin.c:108:15:lv_mem_add_pool	16	static
+../lvgl/src/stdlib/builtin/lv_mem_core_builtin.c:123:6:lv_mem_remove_pool	24	static
+../lvgl/src/stdlib/builtin/lv_mem_core_builtin.c:138:8:lv_malloc_core	4	static
+../lvgl/src/stdlib/builtin/lv_mem_core_builtin.c:153:8:lv_realloc_core	0	static
+../lvgl/src/stdlib/builtin/lv_mem_core_builtin.c:168:6:lv_free_core	8	static
+../lvgl/src/stdlib/builtin/lv_mem_core_builtin.c:186:6:lv_mem_monitor_core	24	static
+../lvgl/src/stdlib/builtin/lv_mem_core_builtin.c:212:13:lv_mem_test_core	16	static

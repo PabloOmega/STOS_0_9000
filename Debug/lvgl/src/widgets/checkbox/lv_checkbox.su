@@ -1,0 +1,7 @@
+../lvgl/src/widgets/checkbox/lv_checkbox.c:129:13:lv_checkbox_constructor	16	static
+../lvgl/src/widgets/checkbox/lv_checkbox.c:165:13:lv_checkbox_event	256	static
+../lvgl/src/widgets/checkbox/lv_checkbox.c:152:13:lv_checkbox_destructor	16	static
+../lvgl/src/widgets/checkbox/lv_checkbox.c:58:12:lv_checkbox_create	8	static
+../lvgl/src/widgets/checkbox/lv_checkbox.c:70:6:lv_checkbox_set_text	16	static
+../lvgl/src/widgets/checkbox/lv_checkbox.c:102:6:lv_checkbox_set_text_static	16	static
+../lvgl/src/widgets/checkbox/lv_checkbox.c:119:14:lv_checkbox_get_text	0	static

@@ -1,0 +1,6 @@
+../lvgl/src/stdlib/builtin/lv_string_builtin.c:56:30:lv_memcpy	80	static
+../lvgl/src/stdlib/builtin/lv_string_builtin.c:118:28:lv_memset	12	static
+../lvgl/src/stdlib/builtin/lv_string_builtin.c:149:8:lv_strlen	0	static
+../lvgl/src/stdlib/builtin/lv_string_builtin.c:157:8:lv_strncpy	4	static
+../lvgl/src/stdlib/builtin/lv_string_builtin.c:167:8:lv_strcpy	0	static
+../lvgl/src/stdlib/builtin/lv_string_builtin.c:174:8:lv_strdup	24	static

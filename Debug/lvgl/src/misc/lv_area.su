@@ -1,0 +1,17 @@
+../lvgl/src/misc/lv_area.c:50:6:lv_area_set	0	static
+../lvgl/src/misc/lv_area.c:63:6:lv_area_set_width	0	static
+../lvgl/src/misc/lv_area.c:73:6:lv_area_set_height	0	static
+../lvgl/src/misc/lv_area.c:84:6:_lv_area_set_pos	0	static
+../lvgl/src/misc/lv_area.c:99:10:lv_area_get_size	0	static
+../lvgl/src/misc/lv_area.c:108:6:lv_area_increase	0	static
+../lvgl/src/misc/lv_area.c:116:6:lv_area_move	0	static
+../lvgl/src/misc/lv_area.c:131:6:_lv_area_intersect	8	static
+../lvgl/src/misc/lv_area.c:155:8:_lv_area_diff	56	static
+../lvgl/src/misc/lv_area.c:226:6:_lv_area_join	4	static
+../lvgl/src/misc/lv_area.c:241:6:_lv_area_is_point_on	72	static
+../lvgl/src/misc/lv_area.c:307:6:_lv_area_is_on	0	static
+../lvgl/src/misc/lv_area.c:324:6:_lv_area_is_in	32	static
+../lvgl/src/misc/lv_area.c:365:6:_lv_area_is_out	32	static
+../lvgl/src/misc/lv_area.c:396:6:_lv_area_is_equal	0	static
+../lvgl/src/misc/lv_area.c:408:6:lv_area_align	28	static
+../lvgl/src/misc/lv_area.c:534:6:lv_point_transform	48	static

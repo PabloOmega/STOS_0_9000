@@ -1,0 +1,17 @@
+../lvgl/src/draw/lv_draw_buf.c:140:15:buf_align	2
+../lvgl/src/draw/lv_draw_buf.c:160:15:buf_go_to_xy	1
+../lvgl/src/draw/lv_draw_buf.c:152:17:width_to_stride	1
+../lvgl/src/draw/lv_draw_buf.c:192:13:buf_copy	5
+../lvgl/src/draw/lv_draw_buf.c:135:13:buf_free	1
+../lvgl/src/draw/lv_draw_buf.c:126:15:buf_malloc	1
+../lvgl/src/draw/lv_draw_buf.c:170:13:buf_clear	4
+../lvgl/src/draw/lv_draw_buf.c:52:6:_lv_draw_buf_init_handlers	1
+../lvgl/src/draw/lv_draw_buf.c:65:26:lv_draw_buf_get_handlers	1
+../lvgl/src/draw/lv_draw_buf.c:71:10:lv_draw_buf_width_to_stride	2
+../lvgl/src/draw/lv_draw_buf.c:77:8:lv_draw_buf_malloc	2
+../lvgl/src/draw/lv_draw_buf.c:83:6:lv_draw_buf_free	2
+../lvgl/src/draw/lv_draw_buf.c:88:8:lv_draw_buf_align	2
+../lvgl/src/draw/lv_draw_buf.c:94:6:lv_draw_buf_invalidate_cache	2
+../lvgl/src/draw/lv_draw_buf.c:99:8:lv_draw_buf_go_to_xy	2
+../lvgl/src/draw/lv_draw_buf.c:106:6:lv_draw_buf_clear	2
+../lvgl/src/draw/lv_draw_buf.c:112:6:lv_draw_buf_copy	2

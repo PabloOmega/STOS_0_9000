@@ -1,0 +1,11 @@
+../lvgl/src/misc/lv_cache.c:39:6:_lv_cache_init	1
+../lvgl/src/misc/lv_cache.c:45:6:lv_cache_set_manager	6
+../lvgl/src/misc/lv_cache.c:64:20:lv_cache_add	3
+../lvgl/src/misc/lv_cache.c:72:20:lv_cache_find	3
+../lvgl/src/misc/lv_cache.c:80:6:lv_cache_invalidate	3
+../lvgl/src/misc/lv_cache.c:88:14:lv_cache_get_data	3
+../lvgl/src/misc/lv_cache.c:97:6:lv_cache_release	3
+../lvgl/src/misc/lv_cache.c:105:6:lv_cache_set_max_size	3
+../lvgl/src/misc/lv_cache.c:114:8:lv_cache_get_max_size	1
+../lvgl/src/misc/lv_cache.c:119:6:lv_cache_lock	1
+../lvgl/src/misc/lv_cache.c:125:6:lv_cache_unlock	1
