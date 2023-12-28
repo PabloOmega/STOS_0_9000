@@ -399,10 +399,13 @@ typedef __PACKED_STRUCT {
 
 void SSD1963_DrawBlackScreen(void);
 void SSD1963_Init(void);
-void SSD1963_putf(char character);
-void my_flush_cb(lv_disp_t * disp, const lv_area_t * area, lv_color_t * color_p);
-void keyboard_read_cb(lv_indev_t * indev, lv_indev_data_t*data);
-char last_key(void);
-bool key_pressed(void);
+void SSD1963_set_area(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
+void SSD1963_start_sending_data(void);
+void SSD1963_set_pixel(uint8_t blue, uint8_t green, uint8_t red);
+//void SSD1963_putf(char character);
+//void my_flush_cb(lv_disp_t * disp, const lv_area_t * area, lv_color_t * color_p);
+//void keyboard_read_cb(lv_indev_t * indev, lv_indev_data_t*data);
+//char last_key(void);
+//bool key_pressed(void);
 
 #endif

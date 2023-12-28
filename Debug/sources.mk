@@ -37,6 +37,8 @@ Core/Startup \
 Core/ThreadSafe \
 Drivers/SSD1963/Src \
 Drivers/STM32H7xx_HAL_Driver/Src \
+Drivers/io \
+Drivers/screen \
 FATFS/App \
 FATFS/Target \
 Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src \

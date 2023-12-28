@@ -62,10 +62,12 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- ../Drivers/SSD1963/Inc/SSD1963.h ../lvgl/lvgl.h ../lvgl/src/lv_init.h \
- ../lvgl/src/lv_conf_internal.h ../lvgl/src/misc/lv_types.h \
- ../lvgl/src/lv_conf_kconfig.h ../lvgl/src/../../lv_conf.h \
- ../lvgl/src/stdlib/lv_mem.h ../lvgl/src/stdlib/../lv_conf_internal.h \
+ C:/Users/Pablo/Documents/Programacion/STM32/STOS_0_9000/Drivers/screen/screen.h \
+ C:/Users/Pablo/Documents/Programacion/STM32/STOS_0_9000/Drivers/io/io.h \
+ ../lvgl/lvgl.h ../lvgl/src/lv_init.h ../lvgl/src/lv_conf_internal.h \
+ ../lvgl/src/misc/lv_types.h ../lvgl/src/lv_conf_kconfig.h \
+ ../lvgl/src/../../lv_conf.h ../lvgl/src/stdlib/lv_mem.h \
+ ../lvgl/src/stdlib/../lv_conf_internal.h \
  ../lvgl/src/stdlib/../misc/lv_types.h ../lvgl/src/stdlib/lv_string.h \
  ../lvgl/src/stdlib/lv_sprintf.h ../lvgl/src/misc/lv_log.h \
  ../lvgl/src/misc/../lv_conf_internal.h ../lvgl/src/misc/lv_types.h \
@@ -339,7 +341,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../lvgl/src/core/../stdlib/builtin/../../osal/lv_os.h \
  ../lvgl/src/core/../stdlib/builtin/../../misc/lv_ll.h \
  ../lvgl/src/core/../tick/lv_tick.h \
- ../lvgl/src/core/../layouts/lv_layout.h
+ ../lvgl/src/core/../layouts/lv_layout.h ../Drivers/SSD1963/Inc/SSD1963.h
 ../Core/Inc/main.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
@@ -408,7 +410,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
-../Drivers/SSD1963/Inc/SSD1963.h:
+C:/Users/Pablo/Documents/Programacion/STM32/STOS_0_9000/Drivers/screen/screen.h:
+C:/Users/Pablo/Documents/Programacion/STM32/STOS_0_9000/Drivers/io/io.h:
 ../lvgl/lvgl.h:
 ../lvgl/src/lv_init.h:
 ../lvgl/src/lv_conf_internal.h:
@@ -728,3 +731,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../lvgl/src/core/../stdlib/builtin/../../misc/lv_ll.h:
 ../lvgl/src/core/../tick/lv_tick.h:
 ../lvgl/src/core/../layouts/lv_layout.h:
+../Drivers/SSD1963/Inc/SSD1963.h:

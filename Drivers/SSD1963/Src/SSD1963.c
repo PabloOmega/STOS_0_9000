@@ -5,8 +5,6 @@
 #include <stdio.h>
 #include <string.h>
 
-#define BUFF_SIZE 40000
-
 extern UART_HandleTypeDef huart3;
 
 void SSD1963_SetConfigs(void);
@@ -22,48 +20,48 @@ void SSD1963_SendData(uint8_t *pData, uint32_t Length);
 
 SSD1963_ConfigsTypeDef SSD1963_Configs;
 
-char key = '\0';
-uint32_t key_tick;
+//char key = '\0';
+//uint32_t key_tick;
 //Frame buffers
 /*Static or global buffer(s). The second buffer is optional*/
 
-static lv_color_t buf_1[BUFF_SIZE]; //TODO: Chose a buffer size. DISPLAY_WIDTH * 10 is one suggestion.
-static lv_color_t buf_2[BUFF_SIZE];
-lv_obj_t * ta;
+//static lv_color_t buf_1[BUFF_SIZE]; //TODO: Chose a buffer size. DISPLAY_WIDTH * 10 is one suggestion.
+//static lv_color_t buf_2[BUFF_SIZE];
+//lv_obj_t * ta;
 
 /* Private functions ---------------------------------------------------------*/
 /* USER CODE BEGIN PF */
-void USBH_HID_EventCallback(USBH_HandleTypeDef *phost){
-	char message[20];
-
-	if( (USBH_HID_GetDeviceType(phost)) == HID_MOUSE ){
-		HID_MOUSE_Info_TypeDef * HID_MOUSE_Info;
-		HID_MOUSE_Info = USBH_HID_GetMouseInfo(phost);
-		uint8_t x = HID_MOUSE_Info->x;
-		uint8_t y = HID_MOUSE_Info->y;
-	}
-
-	if( (USBH_HID_GetDeviceType(phost)) == HID_KEYBOARD ){
-		HID_KEYBD_Info_TypeDef * HID_KEYBOARD_Info;
-		HID_KEYBOARD_Info = USBH_HID_GetKeybdInfo(phost);
-		key = USBH_HID_GetASCIICode(HID_KEYBOARD_Info);
-		key_tick = HAL_GetTick();
-		switch(key){
-		case 13:
-			lv_textarea_delete_char(ta);
-			break;
-		default:
-			lv_textarea_add_char(ta, key);
-			break;
-		}
-
-		//sprintf(message, "%d", key);
-		//HAL_UART_Transmit(&huart3, message, strlen(message), 100);
-		//SSD1963_putf(key);
-//		HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-	}
-	//HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-}
+//void USBH_HID_EventCallback(USBH_HandleTypeDef *phost){
+//	char message[20];
+//
+//	if( (USBH_HID_GetDeviceType(phost)) == HID_MOUSE ){
+//		HID_MOUSE_Info_TypeDef * HID_MOUSE_Info;
+//		HID_MOUSE_Info = USBH_HID_GetMouseInfo(phost);
+//		uint8_t x = HID_MOUSE_Info->x;
+//		uint8_t y = HID_MOUSE_Info->y;
+//	}
+//
+//	if( (USBH_HID_GetDeviceType(phost)) == HID_KEYBOARD ){
+//		HID_KEYBD_Info_TypeDef * HID_KEYBOARD_Info;
+//		HID_KEYBOARD_Info = USBH_HID_GetKeybdInfo(phost);
+//		key = USBH_HID_GetASCIICode(HID_KEYBOARD_Info);
+//		key_tick = HAL_GetTick();
+//		switch(key){
+//		case 13:
+//			lv_textarea_delete_char(ta);
+//			break;
+//		default:
+//			lv_textarea_add_char(ta, key);
+//			break;
+//		}
+//
+//		//sprintf(message, "%d", key);
+//		//HAL_UART_Transmit(&huart3, message, strlen(message), 100);
+//		//SSD1963_putf(key);
+////		HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+//	}
+//	//HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+//}
 /**
   * @brief  Dibuja una pantalla negra.
   * @param  Instance:     LCD Instance.
@@ -327,40 +325,40 @@ void SSD1963_Init(void)
 	SSD1963_SetConfigs();
   /* USER CODE END SSD1963_Init 2 */
 
-	lv_init();
-
-	lv_disp_t * disp = lv_disp_create(480, 272); /*Basic initialization with horizontal and vertical resolution in pixels*/
-	lv_disp_set_flush_cb(disp, my_flush_cb); /*Set a flush callback to draw to the display*/
-	lv_disp_set_draw_buffers(disp, buf_1, NULL, sizeof(buf_1), LV_DISP_RENDER_MODE_PARTIAL); /*Set an initialized buffer*/
-
-	// Change the active screen's background color
-	lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x003a57), LV_PART_MAIN);
-	lv_obj_set_style_text_color(lv_screen_active(), lv_color_hex(0xffffff), LV_PART_MAIN);
-
-//    lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x003a57), LV_PART_MAIN);
+//	lv_init();
 //
-//    /*Create a white label, set its text and align it to the center*/
-//    lv_obj_t * label = lv_label_create(lv_screen_active());
-//    lv_label_set_text(label, "Hello world");
-//    lv_obj_set_style_text_color(lv_screen_active(), lv_color_hex(0xffffff), LV_PART_MAIN);
-//    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-
-	/*Create a spinner*/
-	lv_obj_t * spinner = lv_spinner_create(lv_screen_active());
-	lv_obj_set_size(spinner, 60, 60);
-	lv_obj_align(spinner, LV_ALIGN_CENTER, 0, 0);
-	lv_indev_t * indev = lv_indev_create();
-	lv_indev_set_type(indev, LV_INDEV_TYPE_KEYPAD);
-	lv_indev_set_read_cb(indev, keyboard_read_cb);
-
-    ta = lv_textarea_create(lv_screen_active());
-    lv_textarea_set_one_line(ta, 0);
-    lv_obj_align(ta, LV_ALIGN_TOP_MID, 0, 10);
-    lv_obj_add_state(ta, LV_STATE_FOCUSED); /*To be sure the cursor is visible*/
-
-	lv_group_t * g = lv_group_create();
-	lv_group_add_obj(g, ta);
-	lv_indev_set_group(indev, g);
+//	lv_disp_t * disp = lv_disp_create(480, 272); /*Basic initialization with horizontal and vertical resolution in pixels*/
+//	lv_disp_set_flush_cb(disp, my_flush_cb); /*Set a flush callback to draw to the display*/
+//	lv_disp_set_draw_buffers(disp, buf_1, NULL, sizeof(buf_1), LV_DISP_RENDER_MODE_PARTIAL); /*Set an initialized buffer*/
+//
+//	// Change the active screen's background color
+//	lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x003a57), LV_PART_MAIN);
+//	lv_obj_set_style_text_color(lv_screen_active(), lv_color_hex(0xffffff), LV_PART_MAIN);
+//
+////    lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x003a57), LV_PART_MAIN);
+////
+////    /*Create a white label, set its text and align it to the center*/
+////    lv_obj_t * label = lv_label_create(lv_screen_active());
+////    lv_label_set_text(label, "Hello world");
+////    lv_obj_set_style_text_color(lv_screen_active(), lv_color_hex(0xffffff), LV_PART_MAIN);
+////    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
+//
+//	/*Create a spinner*/
+//	lv_obj_t * spinner = lv_spinner_create(lv_screen_active());
+//	lv_obj_set_size(spinner, 60, 60);
+//	lv_obj_align(spinner, LV_ALIGN_CENTER, 0, 0);
+//	lv_indev_t * indev = lv_indev_create();
+//	lv_indev_set_type(indev, LV_INDEV_TYPE_KEYPAD);
+//	lv_indev_set_read_cb(indev, keyboard_read_cb);
+//
+//    ta = lv_textarea_create(lv_screen_active());
+//    lv_textarea_set_one_line(ta, 0);
+//    lv_obj_align(ta, LV_ALIGN_TOP_MID, 0, 10);
+//    lv_obj_add_state(ta, LV_STATE_FOCUSED); /*To be sure the cursor is visible*/
+//
+//	lv_group_t * g = lv_group_create();
+//	lv_group_add_obj(g, ta);
+//	lv_indev_set_group(indev, g);
 }
 
 /**
@@ -391,23 +389,13 @@ void SSD1963_SendData(uint8_t *pData, uint32_t Length)
   }
 }
 
-void SSD1963_putf(char character)
+void SSD1963_set_area(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
 {
-    lv_obj_t * label = lv_label_create(lv_screen_active());
-    lv_label_set_text(label, (const char *) &character);
-    lv_obj_set_style_text_color(lv_screen_active(), lv_color_hex(0xffffff), LV_PART_MAIN);
-    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-}
+	SSD1963_Configs.ColumnAddress.SC = x1;
+	SSD1963_Configs.ColumnAddress.EC = x2;
 
-void my_flush_cb(lv_disp_t * disp, const lv_area_t * area, lv_color_t * color_p)
-{
-  //Set the drawing region
-  //set_draw_window(area->x1, area->y1, area->x2, area->y2);
-	SSD1963_Configs.ColumnAddress.SC = area->x1;
-	SSD1963_Configs.ColumnAddress.EC = area->x2;
-
-	SSD1963_Configs.PageAddress.SP = area->y1;
-	SSD1963_Configs.PageAddress.EP = area->y2;
+	SSD1963_Configs.PageAddress.SP = y1;
+	SSD1963_Configs.PageAddress.EP = y2;
 
 	SSD1963_SendCmdData(SET_COLUMN_ADDRESS, (uint8_t []) {SSD1963_Configs.ColumnAddress.SCHigh,
 													SSD1963_Configs.ColumnAddress.SCLow,
@@ -417,41 +405,79 @@ void my_flush_cb(lv_disp_t * disp, const lv_area_t * area, lv_color_t * color_p)
 													SSD1963_Configs.PageAddress.SPLow,
 													SSD1963_Configs.PageAddress.EPHigh,
 													SSD1963_Configs.PageAddress.EPLow}, 4);
-
-	SSD1963_SendCmd(0x2C);
-
-	int height = area->y2 - area->y1 + 1;
-	int width = area->x2 - area->x1 + 1;
-
-	//Write colour to each pixel
-	for (int i = 0; i < width * height; i++) {
-	//uint16_t color_full = (color_p->red << 11) | (color_p->green << 5) | (color_p->blue);
-	//parallel_write(color_full);
-		SSD1963_SendDataRS((uint8_t []) {color_p->blue,color_p->green,color_p->red}, 3);
-		color_p++;
-	}
-
-	/* IMPORTANT!!!
-	* Inform the graphics library that you are ready with the flushing*/
-	lv_disp_flush_ready(disp);
 }
 
-void keyboard_read_cb(lv_indev_t * indev, lv_indev_data_t*data){
-	data->key = last_key();            /*Get the last pressed or released key*/
-
-	if(data->key == 'a')
-		HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-//	else
-//		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-//	if(key_pressed()) data->state = LV_INDEV_STATE_PRESSED;
-//	else data->state = LV_INDEV_STATE_RELEASED;
-
+void SSD1963_start_sending_data(void)
+{
+	SSD1963_SendCmd(WRITE_MEMORY_START);
 }
 
-char last_key(void){
-	return key;
+void SSD1963_set_pixel(uint8_t blue, uint8_t green, uint8_t red)
+{
+	SSD1963_SendDataRS((uint8_t []) {blue, green, red}, 3);
 }
 
-bool key_pressed(void){
-	return (HAL_GetTick() - key_tick < 50);
-}
+//void SSD1963_putf(char character)
+//{
+//    lv_obj_t * label = lv_label_create(lv_screen_active());
+//    lv_label_set_text(label, (const char *) &character);
+//    lv_obj_set_style_text_color(lv_screen_active(), lv_color_hex(0xffffff), LV_PART_MAIN);
+//    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
+//}
+
+//void my_flush_cb(lv_disp_t * disp, const lv_area_t * area, lv_color_t * color_p)
+//{
+//  //Set the drawing region
+//  //set_draw_window(area->x1, area->y1, area->x2, area->y2);
+//	SSD1963_Configs.ColumnAddress.SC = area->x1;
+//	SSD1963_Configs.ColumnAddress.EC = area->x2;
+//
+//	SSD1963_Configs.PageAddress.SP = area->y1;
+//	SSD1963_Configs.PageAddress.EP = area->y2;
+//
+//	SSD1963_SendCmdData(SET_COLUMN_ADDRESS, (uint8_t []) {SSD1963_Configs.ColumnAddress.SCHigh,
+//													SSD1963_Configs.ColumnAddress.SCLow,
+//													SSD1963_Configs.ColumnAddress.ECHigh,
+//													SSD1963_Configs.ColumnAddress.ECLow}, 4);
+//	SSD1963_SendCmdData(SET_PAGE_ADDRESS, (uint8_t []) {SSD1963_Configs.PageAddress.SPHigh,
+//													SSD1963_Configs.PageAddress.SPLow,
+//													SSD1963_Configs.PageAddress.EPHigh,
+//													SSD1963_Configs.PageAddress.EPLow}, 4);
+//
+//	SSD1963_SendCmd(0x2C);
+//
+//	int height = area->y2 - area->y1 + 1;
+//	int width = area->x2 - area->x1 + 1;
+//
+//	//Write colour to each pixel
+//	for (int i = 0; i < width * height; i++) {
+//	//uint16_t color_full = (color_p->red << 11) | (color_p->green << 5) | (color_p->blue);
+//	//parallel_write(color_full);
+//		SSD1963_SendDataRS((uint8_t []) {color_p->blue,color_p->green,color_p->red}, 3);
+//		color_p++;
+//	}
+//
+//	/* IMPORTANT!!!
+//	* Inform the graphics library that you are ready with the flushing*/
+//	lv_disp_flush_ready(disp);
+//}
+//
+//void keyboard_read_cb(lv_indev_t * indev, lv_indev_data_t*data){
+//	data->key = last_key();            /*Get the last pressed or released key*/
+//
+//	if(data->key == 'a')
+//		HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+////	else
+////		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+////	if(key_pressed()) data->state = LV_INDEV_STATE_PRESSED;
+////	else data->state = LV_INDEV_STATE_RELEASED;
+//
+//}
+//
+//char last_key(void){
+//	return key;
+//}
+//
+//bool key_pressed(void){
+//	return (HAL_GetTick() - key_tick < 50);
+//}

@@ -195,6 +195,8 @@ RM := rm -rf
 -include Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/subdir.mk
 -include FATFS/Target/subdir.mk
 -include FATFS/App/subdir.mk
+-include Drivers/screen/subdir.mk
+-include Drivers/io/subdir.mk
 -include Drivers/STM32H7xx_HAL_Driver/Src/subdir.mk
 -include Drivers/SSD1963/Src/subdir.mk
 -include Core/ThreadSafe/subdir.mk

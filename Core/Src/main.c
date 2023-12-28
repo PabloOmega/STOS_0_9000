@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "FreeRTOS.h"
 #include "semphr.h"
+#include "screen.h"
 #include "SSD1963.h"
 #include "lvgl.h"
 /* USER CODE END Includes */
@@ -167,8 +168,9 @@ int main(void)
   MX_SDMMC1_SD_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-	SSD1963_Init();
-	SSD1963_DrawBlackScreen();
+//	SSD1963_Init();
+//	SSD1963_DrawBlackScreen();
+  screen_init();
 
   /* USER CODE END 2 */
 
