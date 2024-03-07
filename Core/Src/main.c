@@ -20,7 +20,6 @@
 #include "main.h"
 #include "string.h"
 #include "cmsis_os.h"
-#include "fatfs.h"
 #include "usb_host.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -30,6 +29,7 @@
 #include "screen.h"
 #include "SSD1963.h"
 #include "lvgl.h"
+#include <string.h>>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -69,8 +69,6 @@ ETH_TxPacketConfig TxConfig;
 
 ETH_HandleTypeDef heth;
 
-SD_HandleTypeDef hsd1;
-
 UART_HandleTypeDef huart3;
 
 SRAM_HandleTypeDef hsram1;
@@ -101,26 +99,19 @@ osMutexId_t lvglMutexHandle;
 const osMutexAttr_t lvglMutex_attributes = {
   .name = "lvglMutex"
 };
-/* Definitions for binarySemaphoreISR */
-osSemaphoreId_t binarySemaphoreISRHandle;
-const osSemaphoreAttr_t binarySemaphoreISR_attributes = {
-  .name = "binarySemaphoreISR"
-};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-void PeriphCommonClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_ETH_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_FMC_Init(void);
-static void MX_SDMMC1_SD_Init(void);
 void StartDefaultTask(void *argument);
-void LVGLTimer(void *argument);
-void LVGLTick(void *argument);
+extern void LVGLTimer(void *argument);
+extern void LVGLTick(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -153,9 +144,6 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 
-/* Configure the peripherals common clocks */
-  PeriphCommonClock_Config();
-
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -165,8 +153,6 @@ int main(void)
   MX_ETH_Init();
   MX_USART3_UART_Init();
   MX_FMC_Init();
-  MX_SDMMC1_SD_Init();
-  MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 //	SSD1963_Init();
 //	SSD1963_DrawBlackScreen();
@@ -183,10 +169,6 @@ int main(void)
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
-
-  /* Create the semaphores(s) */
-  /* creation of binarySemaphoreISR */
-  binarySemaphoreISRHandle = osSemaphoreNew(1, 1, &binarySemaphoreISR_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -297,33 +279,6 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief Peripherals Common Clock Configuration
-  * @retval None
-  */
-void PeriphCommonClock_Config(void)
-{
-  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
-
-  /** Initializes the peripherals clock
-  */
-  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SDMMC|RCC_PERIPHCLK_USART3;
-  PeriphClkInitStruct.PLL2.PLL2M = 4;
-  PeriphClkInitStruct.PLL2.PLL2N = 9;
-  PeriphClkInitStruct.PLL2.PLL2P = 2;
-  PeriphClkInitStruct.PLL2.PLL2Q = 3;
-  PeriphClkInitStruct.PLL2.PLL2R = 2;
-  PeriphClkInitStruct.PLL2.PLL2RGE = RCC_PLL2VCIRANGE_3;
-  PeriphClkInitStruct.PLL2.PLL2VCOSEL = RCC_PLL2VCOMEDIUM;
-  PeriphClkInitStruct.PLL2.PLL2FRACN = 3072;
-  PeriphClkInitStruct.SdmmcClockSelection = RCC_SDMMCCLKSOURCE_PLL2;
-  PeriphClkInitStruct.Usart234578ClockSelection = RCC_USART234578CLKSOURCE_PLL2;
-  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
-  {
-    Error_Handler();
-  }
-}
-
-/**
   * @brief ETH Initialization Function
   * @param None
   * @retval None
@@ -369,33 +324,6 @@ static void MX_ETH_Init(void)
   /* USER CODE BEGIN ETH_Init 2 */
 
   /* USER CODE END ETH_Init 2 */
-
-}
-
-/**
-  * @brief SDMMC1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_SDMMC1_SD_Init(void)
-{
-
-  /* USER CODE BEGIN SDMMC1_Init 0 */
-
-  /* USER CODE END SDMMC1_Init 0 */
-
-  /* USER CODE BEGIN SDMMC1_Init 1 */
-
-  /* USER CODE END SDMMC1_Init 1 */
-  hsd1.Instance = SDMMC1;
-  hsd1.Init.ClockEdge = SDMMC_CLOCK_EDGE_RISING;
-  hsd1.Init.ClockPowerSave = SDMMC_CLOCK_POWER_SAVE_DISABLE;
-  hsd1.Init.BusWide = SDMMC_BUS_WIDE_1B;
-  hsd1.Init.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
-  hsd1.Init.ClockDiv = 0;
-  /* USER CODE BEGIN SDMMC1_Init 2 */
-
-  /* USER CODE END SDMMC1_Init 2 */
 
 }
 
@@ -592,6 +520,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(USB_OTG_FS_OVCR_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : PC11 */
+  GPIO_InitStruct.Pin = GPIO_PIN_11;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
   /*Configure GPIO pin : LD2_Pin */
   GPIO_InitStruct.Pin = LD2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -629,58 +563,6 @@ void StartDefaultTask(void *argument)
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_LVGLTimer */
-/**
-* @brief Function implementing the LVGL_Timer thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_LVGLTimer */
-void LVGLTimer(void *argument)
-{
-  /* USER CODE BEGIN LVGLTimer */
-  /* Infinite loop */
-  for(;;)
-  {
-	//xSemaphoreTake(lvglMutexHandle, portMAX_DELAY);
-	  osMutexAcquire(lvglMutexHandle, portMAX_DELAY);
-	  //osSemaphoreAcquire(binarySemaphoreISRHandle, 100);
-	lv_timer_handler();
-	HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-	HAL_UART_Transmit(&huart3, "Tarea 1\n", 8, 100);
-	osMutexRelease(lvglMutexHandle);
-	//xSemaphoreGive(lvglMutexHandle);
-	osDelay(20);
-  }
-  /* USER CODE END LVGLTimer */
-}
-
-/* USER CODE BEGIN Header_LVGLTick */
-/**
-* @brief Function implementing the LVGL_Tick thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_LVGLTick */
-void LVGLTick(void *argument)
-{
-  /* USER CODE BEGIN LVGLTick */
-  /* Infinite loop */
-  for(;;)
-  {
-	//xSemaphoreTake(lvglMutexHandle, portMAX_DELAY);
-	  osMutexAcquire(lvglMutexHandle, portMAX_DELAY);
-	  //osSemaphoreAcquire(binarySemaphoreISRHandle, 100);
-	lv_tick_inc(10);
-	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-	HAL_UART_Transmit(&huart3, "Tarea 2\n", 8, 100);
-	//xSemaphoreGive(lvglMutexHandle);
-	osMutexRelease(lvglMutexHandle);
-	osDelay(10);
-  }
-  /* USER CODE END LVGLTick */
-}
-
 /**
   * @brief  Period elapsed callback in non blocking mode
   * @note   This function is called  when TIM6 interrupt took place, inside
@@ -713,6 +595,8 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
+  	HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+  	HAL_Delay(1000);
   }
   /* USER CODE END Error_Handler_Debug */
 }

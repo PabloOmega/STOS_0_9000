@@ -3,9 +3,7 @@
 #include "usb_host.h"
 #include "usbh_hid.h"
 #include <stdio.h>
-#include <string.h>
-
-extern UART_HandleTypeDef huart3;
+#include <string.h>>
 
 void SSD1963_SetConfigs(void);
 void SSD1963_SendConfigs(void);

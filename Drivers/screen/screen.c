@@ -7,9 +7,14 @@
 
 #include "screen.h"
 #include "SSD1963.h"
+#include "cmsis_os.h"
+#include "main.h"
 
 void my_flush_cb(lv_disp_t * disp, const lv_area_t * area, lv_color_t * color_p);
 //extern void keyboard_read_cb(lv_indev_t * indev, lv_indev_data_t*data);
+extern UART_HandleTypeDef huart3;
+
+extern osMutexId_t lvglMutexHandle;
 
 static lv_color_t buf_1[BUFF_SIZE]; //TODO: Chose a buffer size. DISPLAY_WIDTH * 10 is one suggestion.
 static lv_color_t buf_2[BUFF_SIZE];
@@ -68,6 +73,51 @@ void my_flush_cb(lv_disp_t * disp, const lv_area_t * area, lv_color_t * color_p)
 	/* IMPORTANT!!!
 	* Inform the graphics library that you are ready with the flushing*/
 	lv_disp_flush_ready(disp);
+}
+
+void LVGLTimer(void *argument)
+{
+  /* USER CODE BEGIN LVGLTimer */
+  /* Infinite loop */
+  for(;;)
+  {
+	//xSemaphoreTake(lvglMutexHandle, portMAX_DELAY);
+	  osMutexAcquire(lvglMutexHandle, portMAX_DELAY);
+	  //osSemaphoreAcquire(binarySemaphoreISRHandle, 100);
+	lv_timer_handler();
+	HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+	//HAL_UART_Transmit(&huart3, "Tarea 1\n", 8, 100);
+	osMutexRelease(lvglMutexHandle);
+	//xSemaphoreGive(lvglMutexHandle);
+	osDelay(20);
+  }
+  /* USER CODE END LVGLTimer */
+}
+
+/* USER CODE BEGIN Header_LVGLTick */
+/**
+* @brief Function implementing the LVGL_Tick thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_LVGLTick */
+void LVGLTick(void *argument)
+{
+  /* USER CODE BEGIN LVGLTick */
+  /* Infinite loop */
+  for(;;)
+  {
+	//xSemaphoreTake(lvglMutexHandle, portMAX_DELAY);
+	  osMutexAcquire(lvglMutexHandle, portMAX_DELAY);
+	  //osSemaphoreAcquire(binarySemaphoreISRHandle, 100);
+	lv_tick_inc(10);
+	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	//HAL_UART_Transmit(&huart3, "Tarea 2\n", 8, 100);
+	//xSemaphoreGive(lvglMutexHandle);
+	osMutexRelease(lvglMutexHandle);
+	osDelay(10);
+  }
+  /* USER CODE END LVGLTick */
 }
 
 

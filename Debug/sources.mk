@@ -3,21 +3,26 @@
 # Toolchain: GNU Tools for STM32 (11.3.rel1)
 ################################################################################
 
+C++M_SRCS := 
+CPP_SRCS := 
+S_UPPER_SRCS := 
+O_SRCS := 
 ELF_SRCS := 
 C_UPPER_SRCS := 
 CXX_SRCS := 
+CCM_SRCS := 
 C++_SRCS := 
 OBJ_SRCS := 
 S_SRCS := 
 CC_SRCS := 
 C_SRCS := 
-CPP_SRCS := 
-S_UPPER_SRCS := 
-O_SRCS := 
+CXXM_SRCS := 
 CYCLO_FILES := 
 OBJDUMP_LIST := 
+CCM_DEPS := 
 C_UPPER_DEPS := 
 S_DEPS := 
+CXXM_DEPS := 
 C_DEPS := 
 CC_DEPS := 
 SIZE_OUTPUT := 
@@ -28,6 +33,7 @@ OBJS :=
 CXX_DEPS := 
 MAP_FILES := 
 S_UPPER_DEPS := 
+C++M_DEPS := 
 CPP_DEPS := 
 
 # Every subdirectory with source files must be described here
@@ -39,12 +45,8 @@ Drivers/SSD1963/Src \
 Drivers/STM32H7xx_HAL_Driver/Src \
 Drivers/io \
 Drivers/screen \
-FATFS/App \
-FATFS/Target \
 Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src \
 Middlewares/ST/STM32_USB_Host_Library/Core/Src \
-Middlewares/Third_Party/FatFs/src \
-Middlewares/Third_Party/FatFs/src/option \
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
 Middlewares/Third_Party/FreeRTOS/Source \
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \

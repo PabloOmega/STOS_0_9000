@@ -1,9 +1,7 @@
 ../Core/Src/stm32h7xx_hal_msp.c:64:6:HAL_MspInit	16	static
 ../Core/Src/stm32h7xx_hal_msp.c:87:6:HAL_ETH_MspInit	72	static
 ../Core/Src/stm32h7xx_hal_msp.c:156:6:HAL_ETH_MspDeInit	8	static
-../Core/Src/stm32h7xx_hal_msp.c:200:6:HAL_SD_MspInit	56	static
-../Core/Src/stm32h7xx_hal_msp.c:245:6:HAL_SD_MspDeInit	8	static
-../Core/Src/stm32h7xx_hal_msp.c:277:6:HAL_UART_MspInit	40	static
-../Core/Src/stm32h7xx_hal_msp.c:313:6:HAL_UART_MspDeInit	0	static
-../Core/Src/stm32h7xx_hal_msp.c:403:6:HAL_SRAM_MspInit	240	static
-../Core/Src/stm32h7xx_hal_msp.c:453:6:HAL_SRAM_MspDeInit	8	static
+../Core/Src/stm32h7xx_hal_msp.c:200:6:HAL_UART_MspInit	232	static
+../Core/Src/stm32h7xx_hal_msp.c:255:6:HAL_UART_MspDeInit	0	static
+../Core/Src/stm32h7xx_hal_msp.c:345:6:HAL_SRAM_MspInit	240	static
+../Core/Src/stm32h7xx_hal_msp.c:395:6:HAL_SRAM_MspDeInit	8	static
