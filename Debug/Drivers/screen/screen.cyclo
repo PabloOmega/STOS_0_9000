@@ -1,4 +1,4 @@
-../Drivers/screen/screen.c:54:6:my_flush_cb	3
+../Drivers/screen/screen.c:58:6:flush_cb	3
 ../Drivers/screen/screen.c:23:6:screen_init	1
 ../Drivers/screen/screen.c:78:6:LVGLTimer	1
-../Drivers/screen/screen.c:104:6:LVGLTick	1
+../Drivers/screen/screen.c:102:6:LVGLTick	1

@@ -12,11 +12,17 @@
 #define FMC_BANK1_REG                       ((uint16_t *) 0x60000000)
 #define FMC_BANK1_MEM                       ((uint16_t *) (0x60000000 | 0x0100000))
 
-#define SSD1963_RST_LOW()                       WRITE_REG(GPIOG->BSRR, (uint32_t)GPIO_PIN_2 << 16)
-#define SSD1963_RST_HIGH()                      WRITE_REG(GPIOG->BSRR, GPIO_PIN_2)
+#define SSD1963_RST_PORT                       GPIOG
+#define SSD1963_RST_PIN                        GPIO_PIN_2
 
-#define SSD1963_RS_LOW()                       WRITE_REG(GPIOG->BSRR, (uint32_t)GPIO_PIN_3 << 16)
-#define SSD1963_RS_HIGH()                      WRITE_REG(GPIOG->BSRR, GPIO_PIN_3)
+#define SSD1963_RS_PORT                        GPIOG
+#define SSD1963_RS_PIN                         GPIO_PIN_3
+
+#define SSD1963_RST_LOW()                       WRITE_REG(SSD1963_RST_PORT->BSRR, (uint32_t)SSD1963_RST_PIN << 16)
+#define SSD1963_RST_HIGH()                      WRITE_REG(SSD1963_RST_PORT->BSRR, SSD1963_RST_PIN)
+
+#define SSD1963_RS_LOW()                       WRITE_REG(SSD1963_RS_PORT->BSRR, (uint32_t)SSD1963_RS_PIN << 16)
+#define SSD1963_RS_HIGH()                      WRITE_REG(SSD1963_RS_PORT->BSRR, SSD1963_RS_PIN)
 
 #define NOP_LCD                    0x00
 #define SOFT_RESET                 0x01
@@ -397,15 +403,10 @@ typedef __PACKED_STRUCT {
 	
 } SSD1963_ConfigsTypeDef;	
 
-void SSD1963_DrawBlackScreen(void);
+void SSD1963_DrawTestScreen(void);
 void SSD1963_Init(void);
 void SSD1963_set_area(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
 void SSD1963_start_sending_data(void);
 void SSD1963_set_pixel(uint8_t blue, uint8_t green, uint8_t red);
-//void SSD1963_putf(char character);
-//void my_flush_cb(lv_disp_t * disp, const lv_area_t * area, lv_color_t * color_p);
-//void keyboard_read_cb(lv_indev_t * indev, lv_indev_data_t*data);
-//char last_key(void);
-//bool key_pressed(void);
 
 #endif

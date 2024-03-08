@@ -1,4 +1,2 @@
-../Drivers/io/io.c:21:6:USBH_HID_EventCallback	4
-../Drivers/io/io.c:48:6:keyboard_read_cb	2
-../Drivers/io/io.c:60:6:last_key	1
-../Drivers/io/io.c:64:6:key_pressed	1
+../Drivers/io/io.c:17:6:USBH_HID_EventCallback	4
+../Drivers/io/io.c:49:6:keyboard_read_cb	2

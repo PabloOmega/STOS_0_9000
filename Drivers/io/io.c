@@ -10,13 +10,9 @@
 #include "usb_host.h"
 #include "usbh_hid.h"
 
-extern lv_obj_t * ta;
+extern lv_obj_t * ta;//text area
 
-char key = '\0';
-uint32_t key_tick;
-
-char last_key(void);
-bool key_pressed(void);
+char key = '\0';//set the last pressed key
 
 void USBH_HID_EventCallback(USBH_HandleTypeDef *phost){
 	char message[20];
@@ -24,15 +20,14 @@ void USBH_HID_EventCallback(USBH_HandleTypeDef *phost){
 	if( (USBH_HID_GetDeviceType(phost)) == HID_MOUSE ){
 		HID_MOUSE_Info_TypeDef * HID_MOUSE_Info;
 		HID_MOUSE_Info = USBH_HID_GetMouseInfo(phost);
-		uint8_t x = HID_MOUSE_Info->x;
-		uint8_t y = HID_MOUSE_Info->y;
+		uint8_t x = HID_MOUSE_Info->x;//TODO
+		uint8_t y = HID_MOUSE_Info->y;//TODO
 	}
 
 	if( (USBH_HID_GetDeviceType(phost)) == HID_KEYBOARD ){
 		HID_KEYBD_Info_TypeDef * HID_KEYBOARD_Info;
 		HID_KEYBOARD_Info = USBH_HID_GetKeybdInfo(phost);
 		key = USBH_HID_GetASCIICode(HID_KEYBOARD_Info);
-		key_tick = HAL_GetTick();
 		switch(key){
 		case 13:
 			lv_textarea_delete_char(ta);
@@ -45,22 +40,16 @@ void USBH_HID_EventCallback(USBH_HandleTypeDef *phost){
 	}
 }
 
+/**
+  * @brief  Callback function for keyboard.
+  * @param  indev  input device object
+  * @param  data pointer to a lv_indev_data_t object
+  * @retval
+  */
 void keyboard_read_cb(lv_indev_t * indev, lv_indev_data_t*data){
-	data->key = last_key();            /*Get the last pressed or released key*/
+	data->key = key;            /*Get the last pressed or released key*/
 
 	if(data->key == 'a')
-		HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-//	else
-//		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-//	if(key_pressed()) data->state = LV_INDEV_STATE_PRESSED;
-//	else data->state = LV_INDEV_STATE_RELEASED;
+		HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
 
-}
-
-char last_key(void){
-	return key;
-}
-
-bool key_pressed(void){
-	return (HAL_GetTick() - key_tick < 50);
 }

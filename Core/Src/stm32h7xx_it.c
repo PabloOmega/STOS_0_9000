@@ -188,22 +188,11 @@ void TIM6_DAC_IRQHandler(void)
 void OTG_FS_IRQHandler(void)
 {
   /* USER CODE BEGIN OTG_FS_IRQn 0 */
-	//osMutexAcquire(lvglMutexHandle, portMAX_DELAY);
-//	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
-	//xSemaphoreGiveFromISR(binarySemaphoreISRHandle, &xHigherPriorityTaskWoken);
-	//osSemaphoreAcquire(binarySemaphoreISRHandle, 1000);
-	HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
-	//portYIELD_FROM_ISR(&xHigherPriorityTaskWoken);
   /* USER CODE END OTG_FS_IRQn 0 */
   HAL_HCD_IRQHandler(&hhcd_USB_OTG_FS);
   /* USER CODE BEGIN OTG_FS_IRQn 1 */
-  //osSemaphoreRelease(binarySemaphoreISRHandle);
-//  xTaskResumeFromISR(LVGL_TickHandle);
-//  xTaskResumeFromISR(LVGL_TimerHandle);
-//  xTaskResumeFromISR(defaultTaskHandle);
-  //osMutexRelease(lvglMutexHandle);
-  //osSemaphoreRelease(binarySemaphoreISRHandle);
+
   /* USER CODE END OTG_FS_IRQn 1 */
 }
 
